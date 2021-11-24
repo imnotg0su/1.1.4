@@ -43,8 +43,6 @@ public class Util {
          properties.setProperty(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
          properties.setProperty(Environment.HBM2DDL_AUTO, "update");
          properties.setProperty(Environment.SHOW_SQL, "true");
-         //StandardServiceRegistry sr = new StandardServiceRegistryBuilder().applySettings(properties).build();
-         //sessionFactory = new MetadataSources(sr);
         try {
             sessionFactory = new Configuration().addProperties(properties).addAnnotatedClass(User.class).buildSessionFactory();
         } catch (Exception e) {
